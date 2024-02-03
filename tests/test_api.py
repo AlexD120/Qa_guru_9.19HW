@@ -45,7 +45,7 @@ def test_post_register_successful(api_request):
 
 
 def test_post_register_unsuccessful(api_request):
-    email = "BohdanBogovDan@gmail.com"
+    email = "BohdanBogomDan@gmail.com"
 
     url = "https://reqres.in/api/register"
     data = {"email": email}
