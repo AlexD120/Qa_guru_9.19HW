@@ -29,6 +29,8 @@ def test_post_create(api_request):
 
     assert response.status_code == 201
     validate(body, schema=schemas.POST_CREATE)
+    assert body["name"] == name
+    assert body["job"] == job
 
 
 def test_post_register_successful(api_request):
@@ -67,6 +69,8 @@ def test_put_update(api_request):
 
     assert response.status_code == 200
     validate(body, schema=schemas.PUT_UPDATE)
+    assert body["name"] == name
+    assert body["job"] == job
 
 
 def test_patch_update(api_request):
@@ -80,6 +84,8 @@ def test_patch_update(api_request):
 
     assert response.status_code == 200
     validate(body, schema=schemas.PUT_UPDATE)
+    assert body["name"] == name
+    assert body["job"] == job
 
 
 def test_delite(api_request):
